@@ -1,7 +1,6 @@
 package ru.netology.stats;
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.conditions.ExactText;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +16,7 @@ class BankCardTest {
      void shouldTest() {
 
          SelenideElement form = $("[class]");
-         form.$("[data-test-id=name] input").setValue("Мойва Лох");
+         form.$("[data-test-id=name] input").setValue("Иванов Иван");
          form.$("[data-test-id=phone] input").setValue("+79251111111");
          form.$("[data-test-id=agreement]").click();
          form.$("button").click();
