@@ -13,18 +13,14 @@ class BankCardTest {
         open("http://localhost:9999/");
     }
      @Test
-     void shouldTest() {
+     void shouldSignCorrect() {
 
          SelenideElement form = $("[class]");
          form.$("[data-test-id=name] input").setValue("Иванов Иван");
-         form.$("[data-test-id=phone] input").setValue("+79251111111");
+         form.$("[data-test-id=phone] input").setValue("+79102222222");
          form.$("[data-test-id=agreement]").click();
          form.$("button").click();
          $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
 
-
-
-
-
-     }
+    }
  }
