@@ -6,15 +6,17 @@ branches:
   only:
     - main
 
-build: off
+
 
 install:
   - java -jar ./artifacts/app-order.jar
-  - chmod +x gradlew
+
+build: off
 
 build_script:
 
-  - ./gradlew test -Dselenide.headless=true
+  - chmod +x gradlew
+  - ./gradlew test --info -Dselenide.headless=true
 
 
 
